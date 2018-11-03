@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD08B9CA-912F-4F81-88B0-4C82EE34495B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MealTracking</RootNamespace>
+    <AssemblyName>MealTracking</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dragablz, Version=0.0.3.203, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Dragablz.0.0.3.203\lib\net45\Dragablz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1222, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.1-ci1222\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.2.5.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.Container.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.5.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.9.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0">
+      <HintPath>..\packages\Unity.5.8.11\lib\net47\Unity.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants\DayMealConstants.cs" />
+    <Compile Include="Constants\FoodConstants.cs" />
+    <Compile Include="Constants\FoodUnitConstants.cs" />
+    <Compile Include="Constants\MealFoodConstants.cs" />
+    <Compile Include="Constants\MealConstants.cs" />
+    <Compile Include="Controls\DataGrid.cs" />
+    <Compile Include="Controls\Dialog.cs" />
+    <Compile Include="Controls\ValueSlider.xaml.cs">
+      <DependentUpon>ValueSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BoolNegationConverter.cs" />
+    <Compile Include="Converters\Common\ConverterParameter.cs" />
+    <Compile Include="Converters\IsEnumerableEmptyConverter.cs" />
+    <Compile Include="Converters\IsNullConverter.cs" />
+    <Compile Include="Converters\IsNumberZeroConverter.cs" />
+    <Compile Include="Converters\IsTextEmptyConverter.cs" />
+    <Compile Include="Converters\Multi\MultiBoolConverter.cs" />
+    <Compile Include="Converters\TextToVisibilityConverter.cs" />
+    <Compile Include="Pages\Foods\Controls\DefaultFoodUnit.xaml.cs">
+      <DependentUpon>DefaultFoodUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Foods\Controls\DefaultFoodUnitViewModel.cs" />
+    <Compile Include="Pages\Foods\Dialogs\FoodDialog\FoodDialog.xaml.cs">
+      <DependentUpon>FoodDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Foods\Dialogs\FoodDialog\FoodDialogDialogsSelector.cs" />
+    <Compile Include="Pages\Foods\Dialogs\FoodDialog\FoodDialogViewModel.cs" />
+    <Compile Include="Pages\Foods\Dialogs\FoodDialog\FoodViewModel.cs" />
+    <Compile Include="Pages\Foods\Dialogs\FoodUnitDialog\FoodUnitDialog.xaml.cs">
+      <DependentUpon>FoodUnitDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Foods\Dialogs\FoodUnitDialog\FoodUnitDialogViewModel.cs" />
+    <Compile Include="Pages\Foods\Dialogs\FoodUnitDialog\FoodUnitViewModel.cs" />
+    <Compile Include="Pages\Foods\FoodsPage.xaml.cs">
+      <DependentUpon>FoodsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Foods\FoodsPageDialogsSelector.cs" />
+    <Compile Include="Pages\Foods\FoodsPageViewModel.cs" />
+    <Compile Include="Pages\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pages\MainWindowViewModel.cs" />
+    <Compile Include="Pages\Meals\Dialogs\MealDialog\MealDialog.xaml.cs">
+      <DependentUpon>MealDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Meals\Dialogs\MealDialog\MealDialogDialogsSelector.cs" />
+    <Compile Include="Pages\Meals\Dialogs\MealDialog\MealDialogViewModel.cs" />
+    <Compile Include="Pages\Meals\Dialogs\MealDialog\MealViewModel.cs" />
+    <Compile Include="Pages\Meals\Dialogs\MealFoodDialog\MealFoodDialog.xaml.cs">
+      <DependentUpon>MealFoodDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Meals\Dialogs\MealFoodDialog\MealFoodDialogViewModel.cs" />
+    <Compile Include="Pages\Meals\Dialogs\MealFoodDialog\MealFoodViewModel.cs" />
+    <Compile Include="Pages\Meals\MealsPage.xaml.cs">
+      <DependentUpon>MealsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Meals\MealsPageDialogSelector.cs" />
+    <Compile Include="Pages\Meals\MealsPageViewModel.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\DayMealDialog\DayMealDialog.xaml.cs">
+      <DependentUpon>DayMealDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tracking\Dialogs\DayMealDialog\DayMealDialogDialogsSelector.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\DayMealDialog\DayMealDialogViewModel.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\DayMealDialog\DayMealViewModel.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\EatingDayDialog\EatingDayDialog.xaml.cs">
+      <DependentUpon>EatingDayDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tracking\Dialogs\EatingDayDialog\EatingDayDialogDialogsSelector.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\EatingDayDialog\EatingDayDialogViewModel.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\EatingDayDialog\EatingDayViewModel.cs" />
+    <Compile Include="Pages\Tracking\Dialogs\MealTemplateDialog\MealTemplateDialog.xaml.cs">
+      <DependentUpon>MealTemplateDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tracking\Dialogs\MealTemplateDialog\MealTemplateDialogViewModel.cs" />
+    <Compile Include="Pages\Tracking\TrackingPage.xaml.cs">
+      <DependentUpon>TrackingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tracking\TrackingPageDialogsSelector.cs" />
+    <Compile Include="Pages\Tracking\TrackingPageViewModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Structures\Collections\Common\ObservableRangeCollection.cs" />
+    <Compile Include="Structures\Collections\Common\ObservedCollection.cs" />
+    <Compile Include="Structures\Collections\Common\WpfObservableRangeCollection.cs" />
+    <Compile Include="Structures\Collections\MealFoods.cs" />
+    <Compile Include="Structures\Command.cs" />
+    <Compile Include="Config\Bootstrap.cs" />
+    <Compile Include="Structures\Dialogs\DialogModelBase.cs" />
+    <Compile Include="Structures\Dialogs\DialogResult.cs" />
+    <Compile Include="Structures\Dialogs\DialogFactory.cs" />
+    <Compile Include="Structures\Dialogs\IDialog.cs" />
+    <Compile Include="Structures\ViewModels\IViewModel.cs" />
+    <Compile Include="Structures\ViewModels\ViewModelBase.cs" />
+    <Compile Include="Structures\ViewModels\ViewModelFactory.cs" />
+    <Compile Include="Validation\Validators\DoubleValidator.cs" />
+    <Compile Include="Validation\Validators\TextLengthValidator.cs" />
+    <Page Include="Controls\ValueSlider.xaml" />
+    <Page Include="Pages\Foods\Controls\DefaultFoodUnit.xaml" />
+    <Page Include="Pages\Foods\Dialogs\FoodDialog\FoodDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Foods\Dialogs\FoodUnitDialog\FoodUnitDialog.xaml" />
+    <Page Include="Pages\Foods\FoodsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Meals\Dialogs\MealDialog\MealDialog.xaml" />
+    <Page Include="Pages\Meals\Dialogs\MealFoodDialog\MealFoodDialog.xaml" />
+    <Page Include="Pages\Meals\MealsPage.xaml" />
+    <Page Include="Pages\Tracking\Dialogs\DayMealDialog\DayMealDialog.xaml" />
+    <Page Include="Pages\Tracking\Dialogs\EatingDayDialog\EatingDayDialog.xaml" />
+    <Page Include="Pages\Tracking\Dialogs\MealTemplateDialog\MealTemplateDialog.xaml" />
+    <Page Include="Pages\Tracking\TrackingPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MealTracking.Contract\MealTracking.Contract.csproj">
+      <Project>{1fd3b7d8-0b8f-4c5d-a9c4-238bea3457de}</Project>
+      <Name>MealTracking.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MealTracking.Repository\MealTracking.Repository.csproj">
+      <Project>{cb613e6e-3c94-4878-bd2e-55b4c950c161}</Project>
+      <Name>MealTracking.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MealTracking.Service\MealTracking.Service.csproj">
+      <Project>{c71d7f37-b9d6-4dad-9cda-bf076cf0b424}</Project>
+      <Name>MealTracking.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

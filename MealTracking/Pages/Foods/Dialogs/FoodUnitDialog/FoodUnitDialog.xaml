@@ -1,0 +1,36 @@
+<UserControl x:Class="MealTracking.Pages.Foods.Dialogs.FoodUnitDialog.FoodUnitDialog"
+        x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:controls="clr-namespace:MealTracking.Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:foodUnitDialog="clr-namespace:MealTracking.Pages.Foods.Dialogs.FoodUnitDialog"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=foodUnitDialog:FoodUnitDialogViewModel}"
+ >
+    <controls:Dialog
+        DialogTitle="{Binding DialogTitle}"
+        SubmitButtonTitle="{Binding SubmitButtonTitle}"
+        CanSubmit="{Binding
+            FoodUnit.HasErrors,
+            Converter={StaticResource BoolNegationConverter}}"
+    >
+        <StackPanel Width="120">
+            <TextBox
+                TabIndex="0"
+                materialDesign:HintAssist.Hint="Name"
+                materialDesign:ValidationAssist.Suppress="True"
+                Text="{Binding FoodUnit.Name, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+            />
+        
+            <TextBox
+                TabIndex="1"
+                materialDesign:HintAssist.Hint="Grams"
+                materialDesign:ValidationAssist.Suppress="True"
+                Text="{Binding FoodUnit.Grams, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+            />
+        </StackPanel>
+    </controls:Dialog>
+</UserControl>

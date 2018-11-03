@@ -1,0 +1,43 @@
+<UserControl x:Class="MealTracking.Pages.Meals.Dialogs.MealFoodDialog.MealFoodDialog"
+             x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mealFoodDialog="clr-namespace:MealTracking.Pages.Meals.Dialogs.MealFoodDialog"
+             xmlns:controls="clr-namespace:MealTracking.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=mealFoodDialog:MealFoodDialogViewModel}"
+>
+    <controls:Dialog
+        DialogTitle="{Binding DialogTitle}"
+        SubmitButtonTitle="{Binding SubmitButtonTitle}"
+        CanSubmit="{Binding MealFood.HasErrors, Converter={StaticResource BoolNegationConverter}}"
+    >   
+        <StackPanel Width="120">
+            <ComboBox
+                TabIndex="0"
+                materialDesign:HintAssist.Hint="Food"
+                materialDesign:ValidationAssist.Suppress="True"
+                ItemsSource="{Binding Foods}"
+                SelectedItem="{Binding MealFood.Food, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+            />
+            
+            <ComboBox
+                TabIndex="1"
+                materialDesign:HintAssist.Hint="Unit"
+                materialDesign:ValidationAssist.Suppress="True"
+                ItemsSource="{Binding FoodUnits}"
+                SelectedItem="{Binding MealFood.FoodUnit, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+            />
+            
+            <TextBox
+                TabIndex="2"
+                materialDesign:HintAssist.Hint="Amount"
+                materialDesign:ValidationAssist.Suppress="True"
+                Text="{Binding MealFood.Amount, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+            />
+        </StackPanel>
+    </controls:Dialog>
+</UserControl>

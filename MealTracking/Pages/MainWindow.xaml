@@ -1,0 +1,32 @@
+﻿<Window x:Class="MealTracking.Pages.MainWindow"
+        x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:foods="clr-namespace:MealTracking.Pages.Foods"
+        xmlns:pages="clr-namespace:MealTracking.Pages"
+        xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        xmlns:meals="clr-namespace:MealTracking.Pages.Meals"
+        xmlns:tracking="clr-namespace:MealTracking.Pages.Tracking"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontSize="15"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        d:DataContext="{d:DesignInstance Type=pages:MainWindowViewModel}"
+        Title="Meal tracking"
+        WindowState="Maximized"
+>
+    <dragablz:TabablzControl FixedHeaderCount="3">
+        <TabItem Header="Foods">
+            <foods:FoodsPage DataContext="{Binding FoodsPage}" />
+        </TabItem>
+        <TabItem Header="Meals">
+            <meals:MealsPage DataContext="{Binding MealsPage}" />
+        </TabItem>
+        <TabItem Header="Tracking">
+            <tracking:TrackingPage DataContext="{Binding TrackingPage}" />
+        </TabItem>
+    </dragablz:TabablzControl>
+</Window>

@@ -1,0 +1,27 @@
+<UserControl x:Class="MealTracking.Pages.Tracking.Dialogs.MealTemplateDialog.MealTemplateDialog"
+             x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:MealTracking.Pages.Tracking.Dialogs.MealTemplateDialog"
+             xmlns:controls="clr-namespace:MealTracking.Controls"
+             xmlns:common="clr-namespace:MealTracking.Converters.Common"
+             d:DataContext="{d:DesignInstance Type=local:MealTemplateDialogViewModel}"
+             mc:Ignorable="d">
+    <controls:Dialog
+        DialogTitle="{Binding DialogTitle}"
+        SubmitButtonTitle="{Binding SubmitButtonTitle}"
+        CanSubmit="{Binding
+            MealTemplate,
+            Converter={StaticResource IsNullConverter},
+            ConverterParameter={x:Static common:ConverterParameter.Negation}}"
+    >
+        <ListBox
+            TabIndex="0"
+            ItemsSource="{Binding MealTemplates}"
+            SelectedItem="{Binding MealTemplate}"
+            SelectionMode="Single"
+        />
+    </controls:Dialog>
+</UserControl>

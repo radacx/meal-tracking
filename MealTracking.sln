@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealTracking", "MealTracking\MealTracking.csproj", "{CD08B9CA-912F-4F81-88B0-4C82EE34495B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealTracking.Contract", "MealTracking.Contract\MealTracking.Contract.csproj", "{1FD3B7D8-0B8F-4C5D-A9C4-238BEA3457DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealTracking.Repository", "MealTracking.Repository\MealTracking.Repository.csproj", "{CB613E6E-3C94-4878-BD2E-55B4C950C161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealTracking.Service", "MealTracking.Service\MealTracking.Service.csproj", "{C71D7F37-B9D6-4DAD-9CDA-BF076CF0B424}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MealTracking.Setup", "MealTracking.Setup\MealTracking.Setup.vdproj", "{892984E1-9957-4366-A321-8658199BCC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD08B9CA-912F-4F81-88B0-4C82EE34495B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD08B9CA-912F-4F81-88B0-4C82EE34495B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD08B9CA-912F-4F81-88B0-4C82EE34495B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD08B9CA-912F-4F81-88B0-4C82EE34495B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD3B7D8-0B8F-4C5D-A9C4-238BEA3457DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD3B7D8-0B8F-4C5D-A9C4-238BEA3457DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD3B7D8-0B8F-4C5D-A9C4-238BEA3457DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD3B7D8-0B8F-4C5D-A9C4-238BEA3457DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB613E6E-3C94-4878-BD2E-55B4C950C161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB613E6E-3C94-4878-BD2E-55B4C950C161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB613E6E-3C94-4878-BD2E-55B4C950C161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB613E6E-3C94-4878-BD2E-55B4C950C161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71D7F37-B9D6-4DAD-9CDA-BF076CF0B424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71D7F37-B9D6-4DAD-9CDA-BF076CF0B424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71D7F37-B9D6-4DAD-9CDA-BF076CF0B424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71D7F37-B9D6-4DAD-9CDA-BF076CF0B424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892984E1-9957-4366-A321-8658199BCC73}.Debug|Any CPU.ActiveCfg = Debug
+		{892984E1-9957-4366-A321-8658199BCC73}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AE938E9-5E99-468B-91B0-9FDFAFF642DF}
+	EndGlobalSection
+EndGlobal

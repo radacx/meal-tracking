@@ -1,0 +1,75 @@
+<UserControl x:Class="MealTracking.Pages.Foods.Controls.DefaultFoodUnit"
+             x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:controls="clr-namespace:MealTracking.Pages.Foods.Controls"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=controls:DefaultFoodUnitViewModel}"
+ > 
+    <StackPanel>
+        <TextBox
+            TabIndex="0"
+            Width="120"
+            materialDesign:HintAssist.Hint="Total Calories"
+            materialDesign:ValidationAssist.Suppress="True"
+            IsReadOnly="True"
+            Text="{Binding
+                TotalCalories,
+                Mode=OneWay,
+                ValidatesOnNotifyDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged,
+                StringFormat={}{0:F2} kcal}"
+        />
+                
+        <TextBox
+            TabIndex="1"
+            Width="120"
+            materialDesign:HintAssist.Hint="Name"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Name, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+        />
+        
+        <TextBox
+            TabIndex="2"
+            Width="120"
+            materialDesign:HintAssist.Hint="Grams"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Grams, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+        />
+                    
+        <TextBox
+            TabIndex="3"
+            Width="120"
+            materialDesign:HintAssist.Hint="Carbs"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Carbs, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+        />
+                
+        <TextBox
+            TabIndex="4"
+            Width="120"
+            materialDesign:HintAssist.Hint="Protein"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Protein, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+        />
+                     
+        <TextBox
+            TabIndex="5"
+            Width="120"
+            materialDesign:HintAssist.Hint="Fats"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Fats, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+        />
+        
+        <TextBox
+            TabIndex="6"
+            Width="120"
+            materialDesign:HintAssist.Hint="Alcohol"
+            materialDesign:ValidationAssist.Suppress="True"
+            Text="{Binding Alcohol, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+        />
+    </StackPanel>
+</UserControl>
